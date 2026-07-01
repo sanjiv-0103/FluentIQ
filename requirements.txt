@@ -1,6 +1,6 @@
 fastapi
 uvicorn
-openai-whisper
+groq
 scikit-learn
 pandas
 numpy
