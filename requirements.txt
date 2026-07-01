@@ -17,3 +17,5 @@ jupyter
 notebook
 joblib
 shap
+soundfile
+audioread
