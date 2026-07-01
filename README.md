@@ -23,25 +23,21 @@ FluentIQ is an AI-powered communication coaching platform that analyzes spoken E
 
 ## 🖼️ Application Screenshots
 
-### Dashboard
+## Dashboard
 
-![Dashboard](reports/screenshots/dashboard.png)
+![Dashboard](reports/screenshots/Dashboard%20page.png)
 
-### History
+## History
 
-![History](reports/screenshots/history.png)
+![History](reports/screenshots/History%20page.png)
 
-### Analytics
+## Analytics
 
-![Analytics](reports/screenshots/analytics.png)
+![Analytics](reports/screenshots/Analytics%20page.png)
 
-### Reports
+## Report
 
-![Reports](reports/screenshots/reports.png)
-
-### PDF Report
-
-![PDF](reports/screenshots/pdf.png)
+![Report](reports/screenshots/Generated%20PDF%20File.png)
 
 ---
 
