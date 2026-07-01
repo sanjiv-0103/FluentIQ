@@ -1,0 +1,432 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f8f7ff;
+  color: #1f1b3a;
+}
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #f8f7ff;
+}
+
+.sidebar {
+  width: 78px;
+  background: #ffffff;
+  border-right: 1px solid #eee7ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 22px;
+  gap: 18px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.brandIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.sidebarButton,
+.activeSidebarButton {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.sidebarButton {
+  background: transparent;
+  color: #7c3aed;
+}
+
+.activeSidebarButton {
+  background: #7c3aed;
+  color: white;
+  box-shadow: 0 5px 18px rgba(124, 58, 237, 0.35);
+}
+
+.main {
+  flex: 1;
+}
+
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #eee7ff;
+  padding: 26px 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 0;
+  font-size: 34px;
+  color: #6d28d9;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  color: #6b5b95;
+}
+
+.historyBtn {
+  border: 1px solid #ddd6fe;
+  background: white;
+  color: #6d28d9;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 30px auto;
+  padding: 0 24px 40px;
+}
+
+.uploadCard,
+.card,
+.metricCard {
+  background: white;
+  box-shadow: 0 14px 40px rgba(88, 28, 135, 0.08);
+}
+
+.uploadCard {
+  border-radius: 22px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 24px;
+}
+
+.muted {
+  color: #6b7280;
+}
+
+.dropBox {
+  margin-top: 20px;
+  border: 2px dashed #c4b5fd;
+  border-radius: 18px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #4c1d95;
+  cursor: pointer;
+  background: linear-gradient(180deg, #ffffff, #faf5ff);
+}
+
+.selected {
+  margin-top: 14px;
+  color: #4c1d95;
+  font-weight: 700;
+}
+
+.primaryBtn {
+  margin-top: 16px;
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+  color: white;
+  border: none;
+  padding: 13px 28px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.28);
+}
+
+.primaryBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error {
+  margin-top: 12px;
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.metricCard {
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+}
+
+.metricIcon {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 12px;
+  border-radius: 14px;
+  background: #ede9fe;
+  color: #7c3aed;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+}
+
+.metricLabel {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+.metricValue {
+  color: #7c3aed;
+  font-size: 28px;
+  margin: 10px 0 0;
+}
+
+.card {
+  border-radius: 20px;
+  padding: 26px;
+  margin-bottom: 24px;
+}
+
+.cardTitle {
+  margin: 0 0 14px;
+  color: #35135f;
+}
+
+.transcriptBox {
+  color: #374151;
+  line-height: 1.8;
+  background: #faf5ff;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid #ede9fe;
+}
+
+.feedbackGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.greenTitle {
+  color: #16a34a;
+}
+
+.orangeTitle {
+  color: #f97316;
+}
+
+.list {
+  line-height: 2;
+  color: #374151;
+}
+
+.analyticsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 22px;
+  margin-top: 20px;
+}
+
+.circleMetric {
+  text-align: center;
+}
+
+.circle {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+
+.circleInner {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: white;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: #4c1d95;
+}
+
+.circleLabel,
+.circleMetric p {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #4b5563;
+}
+
+.historyCard {
+  border: 1px solid #ede9fe;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 14px;
+  background: #faf5ff;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .header {
+    padding: 22px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .container {
+    padding: 0 16px 30px;
+  }
+}
+
+.recorderBox {
+  margin-top: 22px;
+  margin-bottom: 24px;
+  padding: 22px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff, #faf5ff);
+  border: 1px solid #ede9fe;
+}
+
+.recorderTitle {
+  margin: 0 0 12px;
+  color: #35135f;
+  font-size: 18px;
+}
+
+.recordStatus {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.recordStatus span {
+  color: #7c3aed;
+  text-transform: capitalize;
+}
+
+.recorderActions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.recordBtn,
+.stopBtn,
+.useRecordingBtn {
+  border: none;
+  border-radius: 14px;
+  padding: 12px 18px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.recordBtn {
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+  color: white;
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.25);
+}
+
+.stopBtn {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.useRecordingBtn {
+  margin-top: 14px;
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.audioPreview {
+  margin-top: 18px;
+}
+
+.audioPreview audio {
+  width: 100%;
+}
+
+.selectedFileCard {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #f5f3ff;
+  border: 1px solid #ede9fe;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.fileIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+}
+
+.fileInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fileInfo strong {
+  color: #1f1b3a;
+}
+
+.fileInfo span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.removeFileBtn {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 12px;
+  background: #fee2e2;
+  color: #dc2626;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
