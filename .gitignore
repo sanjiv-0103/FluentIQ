@@ -40,3 +40,10 @@ dist/
 
 # Logs
 *.log
+
+data/
+venv/
+models/
+reports/
+notebooks/
+input/
