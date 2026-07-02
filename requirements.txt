@@ -10,3 +10,4 @@ python-multipart
 joblib
 soundfile
 audioread
+python-dotenv
