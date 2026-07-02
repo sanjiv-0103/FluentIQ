@@ -47,3 +47,4 @@ models/
 reports/
 notebooks/
 input/
+.env

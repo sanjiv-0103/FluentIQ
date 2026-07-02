@@ -104,7 +104,7 @@ async def analyze_audio(file: UploadFile = File(...)):
 
     features_df, feature_values = extract_features(file_path, transcript)
 
-    prediction = predict_from_features(features_df)
+    prediction = predict_from_features(features_df, feature_values)
 
     feedback = generate_feedback(
         prediction["speaking_level"],
