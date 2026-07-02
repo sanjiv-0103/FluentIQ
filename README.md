@@ -35,17 +35,33 @@ The application accepts recorded or uploaded speech, transcribes it using Whispe
 
 ## 🖥️ Application Screenshots
 
-### Dashboard
+### 📊 Dashboard
 
-![Dashboard](reports/screenshots/dashboard.png)
+![Dashboard](reports/screenshots/dashboard-page.png)
 
-### Analysis Result
+---
 
-![Analysis](reports/screenshots/result.png)
+### 🎯 Analysis Dashboard
 
-### Report
+![Analysis Dashboard](reports/screenshots/dashboard-analysis.png)
 
-![Report](reports/screenshots/report.png)
+---
+
+### 📈 Analytics Page
+
+![Analytics](reports/screenshots/analytics-page.png)
+
+---
+
+### 📄 Generated PDF Report
+
+![Generated Report](reports/screenshots/generated-report.png)
+
+---
+
+### 🕒 History Page
+
+![History](reports/screenshots/history-page.png)
 
 ---
 
