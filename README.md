@@ -1,97 +1,127 @@
-# 🎙️ FluentIQ – AI Communication Coach
+# 🎤 FluentIQ – AI-Powered Communication Coach
 
-FluentIQ is an AI-powered communication coaching platform that analyzes spoken English and provides detailed feedback on communication skills. The application combines speech recognition, machine learning, and an interactive dashboard to help users improve fluency, confidence, pronunciation, grammar, and overall speaking ability.
-
----
-
-## 🚀 Features
-
-- 🎤 Voice Recording
-- 📤 Audio Upload (Drag & Drop)
-- 📝 Automatic Speech Transcription
-- 📊 AI Communication Score
-- 🗣 Speaking Level Prediction
-- ⚡ Words Per Minute Calculation
-- 🚫 Filler Word Detection
-- 💡 Personalized Strengths & Improvements
-- 📈 Speaking Analytics Dashboard
-- 📄 Downloadable PDF Reports
-- 🕒 Analysis History
-- 🎨 Modern Responsive UI
+> Analyze spoken English using AI and Machine Learning to evaluate communication skills, fluency, speaking level, and receive personalized feedback.
 
 ---
 
-## 🖼️ Application Screenshots
+## 🚀 Overview
 
-## Dashboard
+FluentIQ is an end-to-end AI-powered communication assessment platform designed to help students and job seekers improve their English speaking skills.
 
-![Dashboard](reports/screenshots/Dashboard%20page.png)
-
-## History
-
-![History](reports/screenshots/History%20page.png)
-
-## Analytics
-
-![Analytics](reports/screenshots/Analytics%20page.png)
-
-## Report
-
-![Report](reports/screenshots/Generated%20PDF%20file.png)
+The application accepts recorded or uploaded speech, transcribes it using Whisper, extracts speech features, predicts communication quality using trained Machine Learning models, and generates personalized feedback through an intuitive dashboard.
 
 ---
 
-# 🏗️ System Architecture
+## ✨ Features
+
+- 🎙️ Live voice recording
+- 📁 Audio file upload
+- 📝 Speech-to-text transcription (Whisper)
+- 🧠 ML-based speaking level prediction
+- 📊 Communication score prediction
+- 📈 Speech analytics
+  - Words Per Minute
+  - Filler Words
+  - Speaking Level
+  - Communication Score
+- 💬 AI-generated feedback
+- 📄 Downloadable analysis report
+- 🌓 Dark / Light mode
+- 📱 Responsive UI
+- 🐳 Docker support
+- ⚙️ GitHub Actions CI/CD
+
+---
+
+## 🖥️ Application Screenshots
+
+### Dashboard
+
+![Dashboard](reports/screenshots/dashboard.png)
+
+### Analysis Result
+
+![Analysis](reports/screenshots/result.png)
+
+### Report
+
+![Report](reports/screenshots/report.png)
+
+---
+
+## 🏗️ Project Architecture
 
 ```
-              User
-                │
-                ▼
-        React Frontend
-                │
-      Upload / Record Audio
-                │
-                ▼
-          FastAPI Backend
-                │
-      Speech-to-Text (Whisper)
-                │
-      Feature Extraction
-                │
-      AI Communication Scoring
-                │
-      Feedback Generation
-                │
-                ▼
- Dashboard • History • PDF Reports
+                User
+                  │
+                  ▼
+        React + Vite Frontend
+                  │
+                  ▼
+            FastAPI Backend
+                  │
+      ┌───────────┴────────────┐
+      ▼                        ▼
+Speech-to-Text           Feature Extraction
+ (Groq Whisper)         (Librosa + NLP)
+      │                        │
+      └───────────┬────────────┘
+                  ▼
+         Machine Learning Models
+                  │
+                  ▼
+      Feedback & Analytics Engine
+                  │
+                  ▼
+            Beautiful Dashboard
 ```
 
 ---
 
-# ⚙️ Tech Stack
+## 🧠 Machine Learning Pipeline
 
-## Frontend
+1. Audio Upload
+2. Speech Transcription
+3. Audio Feature Extraction
+4. NLP Feature Extraction
+5. Speaking Level Classification
+6. Communication Score Regression
+7. Speech Analytics
+8. AI Feedback Generation
 
-- React.js
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React
 - Vite
-- CSS3
-- React Icons
-- Framer Motion
-- jsPDF
+- JavaScript
+- CSS
 
-## Backend
+### Backend
 
 - FastAPI
 - Python
-- Uvicorn
 
-## AI / Machine Learning
+### Machine Learning
 
-- OpenAI Whisper
+- Scikit-learn
 - Librosa
 - NumPy
-- Speech Processing
-- Natural Language Processing (NLP)
+- Pandas
+
+### Speech Processing
+
+- Groq Whisper
+- NLP
+
+### DevOps
+
+- Docker
+- Docker Compose
+- GitHub Actions
 
 ---
 
@@ -160,7 +190,13 @@ FluentIQ/
 │   └── vite.config.js
 │
 ├── input/
-│
+|
+├── .github/
+|     ├── workflows/
+│           ├── ci.yml
+|     
+├── Dockerfile
+|
 ├── models/
 │   ├── communication_score_regressor_improved.pkl
 │   ├── speech_level_classifier_improved.pkl
@@ -185,51 +221,17 @@ FluentIQ/
 ```
 
 ---
+## ⚡ Running Locally
 
-# 🔄 Workflow
-
-1. User uploads or records audio.
-2. Audio is sent to the FastAPI backend.
-3. Whisper converts speech into text.
-4. Speech features are extracted.
-5. AI evaluates communication quality.
-6. Dashboard displays:
-   - Communication Score
-   - Speaking Level
-   - WPM
-   - Filler Words
-   - Analytics
-   - Strengths
-   - Improvements
-7. User can download a PDF report or view previous analyses.
-
----
-
-# 💻 Installation
-
-## Clone Repository
+### Backend
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/FluentIQ.git
-```
-
-## Backend
-
-```bash
-cd FluentIQ
-
-python -m venv venv
-
-venv\Scripts\activate
-
 pip install -r requirements.txt
 
 python -m uvicorn app.main:app --reload
 ```
 
----
-
-## Frontend
+### Frontend
 
 ```bash
 cd frontend
@@ -241,36 +243,39 @@ npm run dev
 
 ---
 
-# 📊 Sample Output
+## 🐳 Run with Docker
 
-- Speaking Level
-- Communication Score
-- Transcript
-- Words Per Minute
-- Filler Words
-- Confidence Score
-- Grammar Score
-- Vocabulary Score
-- Pronunciation Score
-- Personalized Feedback
+```bash
+docker compose up --build
+```
 
 ---
 
-# 🎯 Future Enhancements
+## ⚙️ Continuous Integration
 
-- User Authentication
-- Cloud Database
-- Progress Tracking
-- Interview Mode
-- Multi-language Support
-- Mobile Application
+GitHub Actions automatically:
+
+- Installs dependencies
+- Checks Python code
+- Builds React application
+- Validates project after every push
 
 ---
 
-# 👨‍💻 Developer
+## 🎯 Future Improvements
+
+- Better pronunciation analysis
+- Confidence detection
+- Pause analysis
+- Grammar scoring
+- Model retraining pipeline
+
+---
+
+## 👨‍💻 Author
 
 **B Sanjiv**
 
-AI & Machine Learning Student
+Artificial Intelligence & Machine Learning Student
 
-Passionate about Artificial Intelligence, Machine Learning, NLP, Speech Processing, and Full Stack AI Applications.
+SRM Institute of Science and Technology
