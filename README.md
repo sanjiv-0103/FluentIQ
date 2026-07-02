@@ -36,32 +36,19 @@ The application accepts recorded or uploaded speech, transcribes it using Whispe
 ## 🖥️ Application Screenshots
 
 ### 📊 Dashboard
-
-![Dashboard](reports/screenshots/dashboard-page.png)
-
----
+![Dashboard](https://raw.githubusercontent.com/sanjiv-0103/FluentIQ/main/reports/screenshots/dashboard-page.png)
 
 ### 🎯 Analysis Dashboard
-
-![Analysis Dashboard](reports/screenshots/dashboard-analysis.png)
-
----
+![Analysis Dashboard](https://raw.githubusercontent.com/sanjiv-0103/FluentIQ/main/reports/screenshots/dashboard-analysis.png)
 
 ### 📈 Analytics Page
-
-![Analytics](reports/screenshots/analytics-page.png)
-
----
+![Analytics](https://raw.githubusercontent.com/sanjiv-0103/FluentIQ/main/reports/screenshots/analytics-page.png)
 
 ### 📄 Generated PDF Report
-
-![Generated Report](reports/screenshots/generated-report.png)
-
----
+![Generated Report](https://raw.githubusercontent.com/sanjiv-0103/FluentIQ/main/reports/screenshots/generated-report.png)
 
 ### 🕒 History Page
-
-![History](reports/screenshots/history-page.png)
+![History](https://raw.githubusercontent.com/sanjiv-0103/FluentIQ/main/reports/screenshots/history-page.png)
 
 ---
 
